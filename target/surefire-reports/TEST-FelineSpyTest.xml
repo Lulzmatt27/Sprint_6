@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="FelineParametrizedTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="FelineSpyTest" time="0.087" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -66,7 +66,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="FelineParametrizedTest" name="getKittensCountReturns[0]" time="0.001"/>
-  <testcase classname="FelineParametrizedTest" name="getKittensCountReturns[1]" time="0"/>
-  <testcase classname="FelineParametrizedTest" name="getKittensCountReturns[2]" time="0"/>
+  <testcase classname="FelineSpyTest" name="getFamilyReturnsForFeline" time="0.008"/>
+  <testcase classname="FelineSpyTest" name="getKittensReturnsForFeline" time="0.064"/>
+  <testcase classname="FelineSpyTest" name="getEatMeatReturnsForFeline" time="0.015"/>
 </testsuite>
