@@ -7,6 +7,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.util.List;
+
 @RunWith(MockitoJUnitRunner.class)
 public class CatMockTest {
 
@@ -21,10 +23,15 @@ public class CatMockTest {
         Assert.assertEquals(expectedSound, actualSound);
     }
 
+    //использовала mockito when
     @Test
     public void getFoodReturnsForCat() throws Exception {
         Cat cat = new Cat(feline);
-        cat.getFood();
-        Mockito.verify(feline).eatMeat();
+        List<String> expectedEatMeat = List.of("Животные", "Птицы", "Рыба");
+        feline.eatMeat();
+        Mockito.verify(feline, Mockito.times(1)).eatMeat();
+        Mockito.when(feline.eatMeat()).thenReturn(expectedEatMeat);
+        Assert.assertEquals(expectedEatMeat, feline.eatMeat());
+        Assert.assertEquals(expectedEatMeat, cat.getFood());
     }
 }
